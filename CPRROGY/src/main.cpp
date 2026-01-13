@@ -11,15 +11,9 @@ int enemyHits = 0;
 LabelPtr label;
 LabelPtr label2;
 
-class Background : public Sprite {
-public:
-    Background() : Sprite(constants::background2_str, 0, 0) {}
-    void tick() override {} 
-};
 
 int main(int argc, char* argv[]) {
-    SpritePtr bg = std::make_shared<Background>();
-    eng.add(bg);
+    
 
     SpritePtr player = std::make_shared<Rocketship>();
     eng.add(player);

@@ -13,12 +13,6 @@
 
 namespace demo {
 
-    class Background : public Sprite {
-    public:
-        Background() : Sprite(constants::background2_str, 0, 0) {}
-        void tick() override {}
-    };
-
     Engine::Engine()
     {
         if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0)
