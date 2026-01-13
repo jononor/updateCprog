@@ -5,9 +5,10 @@
 
 namespace constants
 {
-    // Constants
-   	constexpr int gScreenWidth     { 640 };
-   	constexpr int gScreenHeight    { 480 };
+    // Gör skärmen adjustable
+	inline int gScreenWidth = 640;
+	inline int gScreenHeight = 480;
+	
    	// PATH TO YOUR RESOURCE FOLDER 'resources', 'gResPath'
    	const std::string gResPath { "./resources/" };
 
@@ -26,6 +27,5 @@ namespace constants
 	const std::string shoot_sound_str {gResPath + "sounds/shoot.wav"};
 	const std::string explosion_sound_str {gResPath + "sounds/invaderkilled.wav"};
 }
-
 
 #endif

@@ -24,7 +24,7 @@ namespace demo {
         {
             std::cerr << "TTF_Init failed: " << SDL_GetError() << std::endl;
         }
-        win = SDL_CreateWindow("Our Game", constants::gScreenWidth, constants::gScreenHeight, 0);
+        win = SDL_CreateWindow("Our Game", constants::gScreenWidth, constants::gScreenHeight, SDL_WINDOW_RESIZABLE);
         ren = SDL_CreateRenderer(win, NULL);
 
         
