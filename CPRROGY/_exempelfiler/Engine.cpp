@@ -74,7 +74,7 @@ namespace demo {
 
             while (SDL_PollEvent(&event))
             {
-                //1
+                
                 switch(event.type) {
 
                     case SDL_EVENT_QUIT:
