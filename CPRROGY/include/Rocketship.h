@@ -2,23 +2,16 @@
 
 #include "MoveableSprite.h"
 
-class Rocketship : public demo::MoveableSprite {
+class Rocketship : public demo::MoveableSprite
+{
 
-    public:
-
+public:
     Rocketship();
-    
-    
     void tick() override;
-    
     void onKeyUp() override;
-    
     void onKeyLeft() override;
-    
     void onKeyRight() override;
 
-    private:
+private:
     void shoot();
-    
-
 };

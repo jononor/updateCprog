@@ -5,45 +5,29 @@
 #include <string>
 #include <SDL3/SDL.h>
 
-namespace demo {
+namespace demo
+{
 
     class MoveableSprite;
 
     typedef std::shared_ptr<MoveableSprite> MoveableSpritePtr;
 
-    class MoveableSprite : public Sprite {
+    class MoveableSprite : public Sprite
+    {
 
-        public:
-
+    public:
         static MoveableSpritePtr getMoveableSprite(std::string path, float x, float y);
-
         virtual void tick() override;
-
         virtual void onKeyUp();
-
         virtual void onKeyLeft();
-
         virtual void onKeyRight();
-
         virtual void onKeyDown();
-
         virtual void onCollisionWith(MoveableSpritePtr other);
-        
-        
         ~MoveableSprite();
-        
         bool collidedWith(MoveableSpritePtr other) const;
-
         void move(float dx, float dy);
 
-
-        protected:
+    protected:
         MoveableSprite(std::string path, float x, float y);
-
-
-
-
-
-
     };
 }
