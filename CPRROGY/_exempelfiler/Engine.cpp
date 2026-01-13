@@ -83,25 +83,33 @@ namespace demo {
 
                     case SDLK_UP:
                     for (SpritePtr spr : sprites) {
-                        spr -> onKeyUP();
+                        if (MoveableSprite* mSprite = dynamic_cast<MoveableSprite *>(spr)) {
+                            mSprite -> onKeyUP();
+                        }
                     }
                     break;
 
                     case SDLK_LEFT:
                     for (SpritePtr spr : sprites) {
-                        spr -> onKeyLeft();
+                        if (MoveableSprite* mSprite = dynamic_cast<MoveableSprite *>(spr)) {
+                            mSprite -> onKeyLeft();
+                        }
                     }
                     break;
 
                     case SDLK_RIGHT:
                     for (SpritePtr spr : sprites) {
-                        spr -> onKeyRight();
+                        if (MoveableSprite* mSprite = dynamic_cast<MoveableSprite *>(spr)) {
+                            mSprite -> onKeyRight();
+                        }
                     }
                     break;
 
                     case SDLK_DOWN:
                     for (SpritePtr spr : sprites) {
-                        spr -> onKeyDown();
+                        if (MoveableSprite* mSprite = dynamic_cast<MoveableSprite *>(spr)) {
+                            mSprite -> onKeyDown();
+                        }
                     }
                     break;
 
@@ -189,13 +197,22 @@ namespace demo {
             }
             removed.clear();
 
-            for (SpritePtr sp1 : sprites)
-                for (SpritePtr sp2 : sprites)
-                    if (sp1 != sp2 && sp1->collidedWith(sp2))
-                    {
-                        sp1->onCollisionWith(sp2);
-                        sp2->onCollisionWith(sp1);
+            for (SpritePtr sp1 : sprites) {
+                
+                if (MoveableSprite* mSpr1 = dynamic_cast<MoveableSprite *>(sp1)) {
+                    
+                    for (SpritePtr sp2 : sprites) {
+                        
+                        if (MoveableSprite* mSpr2 = dynamic_cast<MoveableSprite *>(sp2)) {
+                            
+                            if (mSpr1 != mSpr2 && mSpr1->collidedWith(mSpr2)) {
+                                mSpr1->onCollisionWith(mSpr2);
+                                mSpr2->onCollisionWith(mSpr1);
+                            }
+                        }
                     }
+                }
+            }
 
             SDL_SetRenderDrawColor(ren, 0, 0, 0, 255);
             SDL_RenderClear(ren);
@@ -210,5 +227,4 @@ namespace demo {
         }
     }
     Engine eng;
-
 }
