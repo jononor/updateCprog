@@ -34,7 +34,7 @@ namespace demo {
         ren = SDL_CreateRenderer(win, NULL);
 
         
-        const std::string fontPath = constants::gResPath + "fonts/arial.ttf";
+        
         font = TTF_OpenFont(fontPath.c_str(), 24);
     }
 

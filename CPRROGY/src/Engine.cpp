@@ -33,8 +33,7 @@ namespace demo {
         win = SDL_CreateWindow("Our Game", constants::gScreenWidth, constants::gScreenHeight, 0);
         ren = SDL_CreateRenderer(win, NULL);
 
-        //2 engine ska vara i constant
-        //const std::string fontPath = constants::gResPath + "fonts/arial.ttf";
+        
         font = TTF_OpenFont(fontPath.c_str(), 24);
     }
 
@@ -99,11 +98,6 @@ namespace demo {
                     }
                     break;
 
-                    case SDLK_DOWN:
-                    for (SpritePtr spr : sprites) {
-                        spr -> onKeyDown();
-                    }
-                    break;
 
                 } // switch
             }
