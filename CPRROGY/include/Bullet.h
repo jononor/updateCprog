@@ -2,17 +2,14 @@
 
 #include "MoveableSprite.h"
 
-class Bullet : public demo::MoveableSprite {
+class Bullet : public demo::MoveableSprite
+{
 
-    public:
-    
+public:
     Bullet(float x, float y, float speed);
-    
     void tick() override;
-
     void onCollisionWith(demo::MoveableSpritePtr other) override;
 
-    private:
+private:
     float speed;
-
 };
