@@ -21,7 +21,7 @@ namespace demo
         virtual void onKeyUp();
         virtual void onKeyLeft();
         virtual void onKeyRight();
-        virtual void onKeyDown();
+        
         virtual void onCollisionWith(MoveableSpritePtr other);
         ~MoveableSprite();
         bool collidedWith(MoveableSpritePtr other) const;

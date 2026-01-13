@@ -105,13 +105,7 @@ namespace demo {
                     }
                     break;
 
-                    case SDLK_DOWN:
-                    for (SpritePtr spr : sprites) {
-                        if (MoveableSprite* mSprite = dynamic_cast<MoveableSprite *>(spr)) {
-                            mSprite -> onKeyDown();
-                        }
-                    }
-                    break;
+                   
 
                 } // switch
             }
