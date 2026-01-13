@@ -14,8 +14,6 @@ namespace demo {
     
     void MoveableSprite::onKeyRight() {}
     
-    void MoveableSprite::onKeyDown() {}
-    
     void MoveableSprite::onCollisionWith(MoveableSpritePtr other) {}
 
     

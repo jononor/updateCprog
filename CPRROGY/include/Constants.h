@@ -21,6 +21,7 @@ namespace constants
 	const std::string background2_str {gResPath + "images/background-alternativ-2.png"};
 	const std::string bullet_str {gResPath + "images/bullet.png"};
 	const std::string explosion_str {gResPath + "images/explosion.png"};
+	const std::string fontPath = constants::gResPath + "fonts/arial.ttf";
 
 	//PATH'S TO SOUNDS
 	const std::string shoot_sound_str {gResPath + "sounds/shoot.wav"};
